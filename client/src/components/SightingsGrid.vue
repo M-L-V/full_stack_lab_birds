@@ -11,6 +11,7 @@
 
 <script>
 import { eventBus } from '../main';
+import SightingService from '../services/SightingService.js'
 export default {
 	name: "sightings-grid",
 	props: ["sightings"],
@@ -18,9 +19,6 @@ export default {
 		format(value){
 			return new Date(value).toLocaleString().substring(0, 10);
 		}
-	},
-	methods: {
-
 	}
 }
 </script>

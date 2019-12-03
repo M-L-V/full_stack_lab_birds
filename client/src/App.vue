@@ -13,7 +13,7 @@ import { eventBus } from './main';
 
 export default {
   name: 'app',
-  data () {
+  data() {
     return {
       sightings: []
     }
@@ -24,6 +24,9 @@ export default {
   },
   mounted(){
     this.fetchData();
+    eventBus.$on('sighting-added', (sighting) => {
+      this.sightings.push(sighting)
+    })
   },
   methods: {
     fetchData(){
@@ -32,6 +35,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style>
