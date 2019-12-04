@@ -1,17 +1,17 @@
 <template lang="html">
-	<form v-on:submit= "addSighting"id="sightings-form">
+	<form v-on:submit="addSighting" method="post"id="sightings-form">
 		<h2>Add a Sighting</h2>
 		<div class="formWrap">
 			<label for="species">Species:</label>
-			<input type="text" id="species" />
+			<input type="text" id="species" v-model="species"/>
 		</div>
 		<div class="formWrap">
 			<label for="location">Location:</label>
-			<input type="text" id="location" />
+			<input type="text" id="location" v-model="location" />
 		</div>
 		<div class="formWrap">
 			<label for="date">Date:</label>
-			<input type="date" id="date" />
+			<input type="date" id="date" v-model="date"/>
 		</div>
 
 		<input type="submit" value="Save" id="save"/>

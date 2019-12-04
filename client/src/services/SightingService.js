@@ -6,10 +6,11 @@ export default {
     .then(res => res.json())
   },
 postSightings(payload){
+  console.log("payload", payload);
   return fetch(baseURL, {
     method:'POST',
     body: JSON.stringify(payload),
-    heading: {'Content-Type': 'application/json'}
+    headers: {'Content-Type': 'application/json'}
   })
     .then(res => res.json())
   }
